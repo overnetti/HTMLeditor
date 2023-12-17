@@ -1,0 +1,32 @@
+body {
+    padding: 60px 10px;
+}
+
+ul.tools {
+    display: none;
+    list-style: none;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+    border-radius: 25px;
+    padding: 12px;
+    position: absolute;
+    background-color: rgba(105, 209, 186, 0.9);
+}
+ul.tools li {
+    display: block;
+    border-radius: 25px;
+    width: 80px;
+    height: 20px;
+    border: solid 0px #000;
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: arial;
+    font-weight: 550;
+    text-align: center;
+    background-color: rgba(242, 245, 244, 1);
+}
+
+ul.tools li:hover {
+  background-color: rgba(22, 161, 130);
+  color: white;
+}
