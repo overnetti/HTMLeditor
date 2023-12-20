@@ -3,6 +3,8 @@
 ## Introduction
 This project will serve as an browser-based in-line HTML editor on Chrome. When the Chrome extension is turned on, users will be able to highlight text on a page and interact with a popup that will give them the option of wrapping the text with a p tag, ahref tag, or li tag to start. The idea of the project is to make it easier for users who interact with CMS systems like Wordpress or Drupal to quickly add HTML tags to the content they are creating.
 
+![chrome-extension-sample](https://github.com/overnetti/HTMLeditor/assets/39422836/5a4ed9d6-80a5-4923-9122-2dba80a38e1d)
+
 
 ## Guidelines
 
