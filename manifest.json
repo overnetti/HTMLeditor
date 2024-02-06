@@ -2,8 +2,12 @@
     "manifest_version": 2,
     "name": "Browser HTML Editor",
     "version": "1.0.0",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
+            "css": ["styles.css"],
             "matches": ["http://*/*"],
             "js": ["Content.js"]
         }

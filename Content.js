@@ -1,35 +1,39 @@
-//document.addEventListener('mouseup', function(event) {
-   // var selectedText = window.getSelection().toString().trim();
-   // if (selectedText !== '') {
-     //   var popup = document.createElement('div');
-     //   popup.id = 'highlightPopup';
-      //  popup.innerHTML = '<iframe src="' + chrome.runtime.getURL('popup.html') + '" frameborder="0"></iframe>';
-        
-       // popup.style.left = event.pageX + 'px';
-        //popup.style.top = event.pageY - 30 + 'px';
-
-      //  document.body.appendChild(popup);
-    //}
-//});
-
-//probably keep this part
-var pageX;
-var pageY;
-
-$(document).ready(function() {
-    $(document).bind("mouseup", function() {
-        var selectedText = window.getSelection().toString().trim();
-        if(selectedText != ''){
-            $('ul.tools').css({
-                'left': pageX + 5,
-                'top' : pageY - 55
-            }).fadeIn(200);
-        } else {
-            $('ul.tools').fadeOut(200);
+//Wraps text with specific tags
+function wrapTextWithTag(tagOne, tagTwo) {
+    document.addEventListener('mouseup', function(event) {
+        let selectedText = window.getSelection().toString().trim();
+        const txt = document.getElementById("txt");
+    
+        if (selectedText !== '') {
+            const before = txt.value.substring(0, txt.selectionStart);
+            const sel = txt.value.substring(txt.selectionStart, txt.selectionEnd);
+            const after = txt.value.substring(txt.selectionEnd);
+            txt.value = `${before}${tagOne}${sel}${tagTwo}${after}`;
+            //console.log(txt.value);
         }
+
+        document.removeEventListener('mouseup', wrapTextWithTag);
+    })
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("pTagButton").addEventListener('click', function() {
+        wrapTextWithTag('<p>', '</p>');
     });
-    $(document).on("mousedown", function(e){
-        pageX = e.pageX;
-        pageY = e.pageY;
+});
+
+//Currently creates an alert when clicked for functionality test
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("hrefTagButton").addEventListener('click', function() {
+        alert('Clicked!');
+        //wrapTextWithTag('<a href>', </a>');
+    });
+});
+
+//Currently creates an alert when clicked for functionality test
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("liTagButton").addEventListener('click', function() {
+        alert('Clicked!');
+        //wrapTextWithTag('<li>', </li>');
     });
 });

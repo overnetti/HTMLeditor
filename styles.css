@@ -1,21 +1,8 @@
-body {
-    padding: 60px 10px;
-}
-
-ul.tools {
-    display: none;
-    list-style: none;
-    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
-    border-radius: 25px;
-    padding: 12px;
-    position: absolute;
-    background-color: rgba(105, 209, 186, 0.9);
-}
-ul.tools li {
+ul.tools button {
     display: block;
     border-radius: 25px;
-    width: 80px;
-    height: 20px;
+    width: 100px;
+    height: auto;
     border: solid 0px #000;
     margin: 5px;
     padding: 5px 10px;
@@ -24,9 +11,10 @@ ul.tools li {
     font-weight: 550;
     text-align: center;
     background-color: rgba(242, 245, 244, 1);
-}
-
-ul.tools li:hover {
-  background-color: rgba(22, 161, 130);
-  color: white;
-}
+  }
+  
+  ul.tools button:hover {
+    background-color: rgba(22, 161, 130);
+    color: white;
+  }
+  

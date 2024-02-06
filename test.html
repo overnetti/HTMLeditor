@@ -5,35 +5,9 @@
         <title>Text Selection Test</title>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script></head>
         <body>
-            <p>This is a webpage for some testing.</p>
-            <p>Here's a bunch of bullshit text to test on:</p>
+            <p>This is a webpage for testing the JS code on both text on the page and in a textarea.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <ul class="tools">
-                <li>p tag</li>
-                <li>a href tag</li>
-                <li>li tag</li>
-            </ul>
-            <script>
-                var pageX;
-                var pageY;
-
-                $(document).ready(function() {
-                    $(document).bind("mouseup", function() {
-                        var selectedText = window.getSelection().toString().trim();
-                        if(selectedText != ''){
-                            $('ul.tools').css({
-                            'left': pageX + 5,
-                            'top' : pageY - 55
-                        }).fadeIn(200);
-                        } else {
-                            $('ul.tools').fadeOut(200);
-                        }
-                    });
-                    $(document).on("mousedown", function(e){
-                        pageX = e.pageX;
-                        pageY = e.pageY;
-                    });
-                });
-            </script>
+            
+            <textarea id="txt">One two three</textarea>
         </body>
 </html>
